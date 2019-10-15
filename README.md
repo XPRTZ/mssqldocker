@@ -4,7 +4,7 @@
 * Configure the database with a database and user
 
 This project is forked from https://github.com/mcmoe/mssqldocker
-The main difference is this project embeds the executed SQL statements as layers within the Docker container instead of executhing them on every container start. This should significantly speed up startup process of the container.
+The main difference is this project embeds the executed SQL statements as layers within the Docker container instead of executing them on every container start. This should significantly speed up startup process of the container, especially with more complex database structures.
 
 # How to Run
 ## Clone this repo
