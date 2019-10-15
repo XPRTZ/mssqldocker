@@ -14,6 +14,7 @@ If you want to modify the files in the image, then you'll have to build locally.
 There are two directories that are used in the build:
 * structure
 * data
+
 You should place your SQL scripts in these directories they will be executed during the build.
 
 Build with `docker-compose`:
