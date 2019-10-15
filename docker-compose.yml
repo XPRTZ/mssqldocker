@@ -1,15 +1,18 @@
-version: '3.2'
+version: '3.4'
 
 services:
   db:
-    build: .
-    image: mcmoe/mssqldocker:v2017.CU12.1
-    environment:
-      ACCEPT_EULA: Y
-      SA_PASSWORD: 2astazeY
-      MSSQL_DB: dev
-      MSSQL_USER: Kobeissi
-      MSSQL_PASSWORD: 7ellowEl7akey
-    ports:
-      - "1433:1433"
+    image: xprtz/mssqldev:latest
     container_name: mssqldev
+    ports:
+        - "1433:1433"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+          ACCEPT_EULA: Y
+          SA_PASSWORD: 1234#%*(abcdEFGH
+          MSSQL_PID: Developer
+          MSSQL_DB: TestDB
+          MSSQL_USER: test_db_user
+          MSSQL_PASSWORD: T35!DBU53r
