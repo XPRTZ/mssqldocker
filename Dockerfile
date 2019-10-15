@@ -13,10 +13,10 @@ RUN chmod +x setup-db.sh
 
 RUN export ACCEPT_EULA=$ACCEPT_EULA \
     && export SA_PASSWORD=$SA_PASSWORD \
-	&& export MSSQL_PID=$MSSQL_PID \
-	&& export MSSQL_DB=$MSSQL_DB \
-	&& export MSSQL_USER=$MSSQL_USER \
-	&& export MSSQL_PASSWORD=$MSSQL_PASSWORD \
-	&& (/opt/mssql/bin/sqlservr & ) | grep -q "Service Broker manager has started" \
-	&& ./setup-db.sh \
-	&& pkill sqlservr
+    && export MSSQL_PID=$MSSQL_PID \
+    && export MSSQL_DB=$MSSQL_DB \
+    && export MSSQL_USER=$MSSQL_USER \
+    && export MSSQL_PASSWORD=$MSSQL_PASSWORD \
+    && (/opt/mssql/bin/sqlservr & ) | grep -q "Service Broker manager has started" \
+    && ./setup-db.sh \
+    && pkill sqlservr
