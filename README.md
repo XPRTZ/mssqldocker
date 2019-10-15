@@ -3,6 +3,9 @@
 * Build a docker image based on mcr.microsoft.com/mssql/server
 * Configure the database with a database and user
 
+This project is forked from https://github.com/mcmoe/mssqldocker
+The main difference is this project embeds the executed SQL statements as layers within the Docker container instead of executhing them on every container start. This should significantly speed up startup process of the container.
+
 # How to Run
 ## Clone this repo
 ```
